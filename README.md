@@ -32,4 +32,7 @@ using Mel-spectrogram representations of audio data.
 - `notebooks/` – Colab notebook for verification and visualization
 - `samples/` – example Mel-spectrogram images
 
+Milestone 1 completed: Data preprocessing and verification done.
+
+
 > Note: Large datasets and NumPy files are excluded from this repository.
