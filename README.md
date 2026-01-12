@@ -1,38 +1,62 @@
-# InstruMusic – Instrument Classification (Milestone 1)
+# CNN-Based Musical Instrument Recognition System
 
-This project builds a machine learning pipeline for classifying musical instruments
-using Mel-spectrogram representations of audio data.
+## Overview
+This project focuses on building a Convolutional Neural Network (CNN)–based system to automatically recognize musical instruments from audio samples. Audio signals are converted into log-mel spectrograms, which are treated as images and classified using deep learning techniques.
 
-## Milestone 1 – Data Preparation & Preprocessing
+The project is developed incrementally through well-defined milestones, covering data preprocessing, model training, evaluation, tuning, and deployment.
 
-### Dataset
-- NSynth Acoustic subset
-- 8 acoustic instrument classes
-- 700 samples per class (balanced)
+---
 
-### Pipeline
-1. Sub-sampled and curated a balanced acoustic dataset locally
-2. Converted audio to fixed-length Mel-spectrograms (128×128)
-3. Stored features and labels as NumPy arrays
-4. Verified preprocessing in Google Colab
-5. Visualized class balance and sample spectrograms
+## Dataset
+- **NSynth Dataset (Acoustic Subset)** by Google Magenta  
+- High-quality, monophonic instrument recordings  
+- Audio samples processed into log-mel spectrograms  
+- 8 instrument classes used for classification  
 
-### Classes Used
-- Brass
-- Flute
-- Guitar
-- Keyboard
-- Mallet
-- Reed
-- String
-- Vocal
+---
 
-### Repository Structure
-- `scripts/` – preprocessing and dataset curation scripts
-- `notebooks/` – Colab notebook for verification and visualization
-- `samples/` – example Mel-spectrogram images
+## Project Structure
 
-Milestone 1 completed: Data preprocessing and verification done.
+```text
+Scripts/                 # Audio preprocessing and data pipeline scripts
+Sample_Spectrograms/     # Visual inspection of extracted spectrograms
+Milestone2/              # Baseline CNN training and evaluation
+Milestone3/              # Model tuning and performance improvement
+README.md                # Project overview (this file)
+```
 
+---
 
-> Note: Large datasets and NumPy files are excluded from this repository.
+## Milestones Summary
+
+### Milestone 1 – Data Preprocessing
+- Audio standardization (sample rate, mono conversion, fixed duration)
+- Log-mel spectrogram extraction
+- Dataset validation through visual inspection
+- Clean feature–label pipeline prepared using NumPy arrays
+
+### Milestone 2 – Baseline CNN Model
+- CNN trained on acoustic instrument spectrograms
+- Validation accuracy of approximately **78%**
+- Confusion matrix used to identify class-wise errors
+
+### Milestone 3 – Model Evaluation & Tuning
+- Batch Normalization experiment (discarded due to performance degradation)
+- Deeper CNN architecture introduced
+- Validation accuracy improved to approximately **92–93%**
+- Reduced confusion between acoustically similar instruments
+- Final model selected for deployment
+
+---
+
+## Current Status
+- Data preprocessing completed  
+- Model training and tuning completed  
+- Final CNN model selected  
+- Ready for inference and deployment (Milestone 4)
+
+---
+
+## Notes
+- Trained model files (`.keras`) are not included in the repository due to size constraints
+- Performance plots and confusion matrices are available within respective milestone folders
