@@ -1,0 +1,58 @@
+instrument_names = [
+    "brass",
+    "flute",
+    "guitar",
+    "keyboard",
+    "mallet",
+    "reed",
+    "string",
+    "vocal"
+]
+
+label_to_name = dict(enumerate(instrument_names))
+print(label_to_name)
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.load("/content/drive/MyDrive/InstruNet-AI/Processed/X.npy")
+y = np.load("/content/drive/MyDrive/InstruNet-AI/Processed/y.npy")
+
+instrument_names = [
+    "brass", "flute", "guitar", "keyboard",
+    "mallet", "reed", "string", "vocal"
+]
+
+samples_per_class = 5
+num_classes = len(instrument_names)
+
+plt.figure(figsize=(15, 10))
+
+plot_index = 1
+for label in range(num_classes):
+    indices = np.where(y == label)[0][:samples_per_class]
+
+    for idx in indices:
+        plt.subplot(num_classes, samples_per_class, plot_index)
+        plt.imshow(X[idx], aspect='auto', origin='lower')
+        plt.title(instrument_names[label])
+        plt.axis('off')
+        plot_index += 1
+
+plt.tight_layout()
+plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+unique, counts = np.unique(y, return_counts=True)
+labels = [instrument_names[i] for i in unique]
+
+plt.figure(figsize=(10, 5))
+plt.bar(labels, counts)
+plt.xlabel("Instrument")
+plt.ylabel("Number of Samples")
+plt.title("Instrument Class Distribution (NSynth Acoustic)")
+plt.xticks(rotation=45)
+plt.show()
