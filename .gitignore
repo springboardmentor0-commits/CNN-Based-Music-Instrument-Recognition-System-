@@ -1,0 +1,17 @@
+*.csv
+*.xlsx
+*.json
+*.zip
+*.rar
+*.tar
+*.gz
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.h5
+*.npy
+*.npz
+img_folder/
+nsynth-train/
