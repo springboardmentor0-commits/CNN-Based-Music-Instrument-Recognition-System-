@@ -1,0 +1,10 @@
+{
+  "brass": 0,
+  "flute": 1,
+  "guitar": 2,
+  "keyboard": 3,
+  "mallet": 4,
+  "reed": 5,
+  "string": 6,
+  "vocal": 7
+}

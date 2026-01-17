@@ -1,0 +1,11 @@
+# Ignore large datasets
+npy_dataset/
+*.npy
+nsynth-train-all/
+filtered_nsynth/
+
+# Colab checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
