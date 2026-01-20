@@ -21,16 +21,12 @@ def predict_instrument(audio_file):
     mel = librosa.feature.melspectrogram(y=audio, sr=22050, n_mels=128)
     mel_db = librosa.power_to_db(mel, ref=np.max)
     mel_db = np.resize(mel_db, (128, 128))
-    mel_db = mel_db.astype(np.float32)
-
-    mel_db = mel_db.reshape(1, 128, 128, 1)
+    mel_db = mel_db.astype(np.float32).reshape(1, 128, 128, 1)
 
     interpreter.set_tensor(input_details[0]['index'], mel_db)
     interpreter.invoke()
     output = interpreter.get_tensor(output_details[0]['index'])
-
-    pred_idx = np.argmax(output)
-    return label_map[pred_idx]
+    return label_map[np.argmax(output)]
 
 st.title("🎶 InstruNet - Instrument Recognition System")
 st.write("Upload a `.wav` file to classify the instrument.")
