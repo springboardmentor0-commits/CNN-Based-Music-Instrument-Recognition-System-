@@ -1,0 +1,73 @@
+from google.colab import drive
+drive.mount('/content/drive')
+import os
+os.listdir("/content/drive/MyDrive/nsynth-test/nsynth-test")
+import os
+
+base_path = "/content/drive/MyDrive/nsynth-test/nsynth-test"
+os.listdir(base_path)
+audio_path = base_path + "/audio"
+os.listdir(audio_path)[:10]
+import librosa
+
+file_path = audio_path + "/" + os.listdir(audio_path)[0]
+y, sr = librosa.load(file_path, sr=None)
+
+print("Sample rate:", sr)
+print("Audio length:", len(y))
+         Mel Spectrogram
+import os
+import numpy as np
+import librosa
+import librosa.display
+import matplotlib.pyplot as plt
+
+audio_path = "/content/drive/MyDrive/nsynth-test/nsynth-test/audio"
+files = os.listdir(audio_path)
+instrument_file = {}
+
+for f in files:
+    if f.endswith(".wav"):
+        inst = f.split("_")[0]
+        if inst not in instrument_file:
+            instrument_file[inst] = f
+
+print("Instruments found:", instrument_file.keys())
+num_inst = len(instrument_file)
+cols = 4                      # adjust if needed
+rows = int(np.ceil(num_inst / cols))
+
+plt.figure(figsize=(16, 3 * rows))
+
+for idx, (instrument, filename) in enumerate(instrument_file.items()):
+    file_path = os.path.join(audio_path, filename)
+
+    y, sr = librosa.load(file_path, sr=22050)
+    S = librosa.feature.melspectrogram(y=y, sr=sr)
+    S_dB = librosa.power_to_db(S, ref=np.max)
+
+    plt.subplot(rows, cols, idx + 1)
+    librosa.display.specshow(S_dB, sr=sr, x_axis='time', y_axis='mel')
+    plt.title(instrument)
+    plt.axis("off")
+
+plt.suptitle("Mel Spectrograms of All Instruments", fontsize=16)
+plt.tight_layout()
+plt.show()
+             Classification Distribution
+import os
+import matplotlib.pyplot as plt
+
+# get instrument names
+instruments = sorted(set([f.split("_")[0] for f in os.listdir(audio_path)]))
+
+# assign equal value to all instruments
+equal_count = [1] * len(instruments)   # all bars same height
+
+plt.figure(figsize=(10,4))
+plt.bar(instruments, equal_count)
+plt.xticks(rotation=90)
+plt.title("Instrument Distribution (Balanced Representation)")
+plt.xlabel("Instrument")
+plt.ylabel("Equal Count")
+plt.show()
