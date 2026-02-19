@@ -398,7 +398,7 @@ Model trained on publicly available instrument datasets including:
 
 **Developer**: Harshitha P Salian
 
-💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/harshitha-p-s-163574288/)  
+💼 LinkedIn: [linkedin.com/in/harshitha-p-s](https://www.linkedin.com/in/harshitha-p-s-163574288/)  
 
 
 ---
@@ -416,3 +416,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Made with ❤️ by Harshitha P Salian
 
 </div>
+
