@@ -1,130 +1,290 @@
-# Synthetic Audio Dataset Generation
 
-This repository contains a Python-based system for generating a **synthetic audio dataset** that simulates multiple musical instruments using mathematical signal synthesis.  
-The dataset is designed for **machine learning, deep learning, and digital signal processing experiments**, especially in audio classification and feature extraction tasks.
-
----
-
-## 🎯 Project Objective
-
-The goal of this project is to create a **clean, controlled audio dataset** where different instrument classes are generated using predefined frequency and harmonic structures.  
-Since the data is synthetic, it removes real-world noise and recording inconsistencies, making it ideal for **prototyping and academic experimentation**.
+# 🎵 InstruNet AI  
+### Multi-Instrument Audio Intelligence Platform  
 
 ---
 
-## 🎵 Instrument Classes
+## 🌐 Live Demo
 
-The dataset simulates three musical instruments, each with a distinct waveform pattern:
+🔗 **Live Application:**  
+https://cnn-based-musical-instrument-detect.vercel.app/ 
 
-### 🎶 Flute
-- Generated using a pure sine wave
-- Frequency: **1000 Hz**
-- Represents smooth and clean tonal behavior
 
-### 🎻 Violin
-- Generated using multiple harmonics
-- Base frequency: **440 Hz**
-- Includes **5 harmonics** to simulate rich string vibrations
-
-### 🎺 Trumpet
-- Generated using strong harmonic overtones
-- Base frequency: **600 Hz**
-- Includes **3 harmonics** for a bright sound profile
 
 ---
 
-## 📁 Dataset Structure
+## 🚩 Problem Statement
 
+Modern audio analysis systems struggle with:
+
+- Multi-instrument detection in mixed audio
+- Lack of interpretability in AI predictions
+- No structured analytics dashboards
+- No exportable business reports
+- Limited scalability for production systems
+
+There is a need for a production-ready AI platform capable of:
+
+- Multi-label instrument classification
+- Visual analytics and explainability
+- Exportable JSON & PDF reports
+- Premium business workflows
+- Scalable deep learning architecture
+
+---
+
+## 🎯 Purpose of the Project
+
+InstruNet AI was built to create a deployable, real-world AI system that:
+
+- Detects multiple musical instruments from raw audio
+- Uses CNN-based deep learning on Mel-Spectrogram features
+- Provides an interactive analytics dashboard
+- Generates professional PDF and JSON reports
+- Implements premium access logic for business scenarios
+
+---
+
+## 📌 Project Overview
+
+InstruNet AI processes uploaded WAV files through the following pipeline:
+
+1. Audio → Mel-Spectrogram transformation  
+2. CNN-based multi-label prediction  
+3. Probability aggregation  
+4. Dashboard visualization  
+5. Report generation  
+
+The deployed demo includes:
+
+- 🔐 Sign-in / Login system
+- 🎧 Audio upload & processing
+- 🧠 CNN confidence scoring
+- 📊 Interactive analytics dashboard
+- 📄 Downloadable PDF reports
+- 📦 JSON export
+- ⭐ Premium watermark-free mode
+
+---
+
+## 🧠 Tech Stack
+
+### AI & Backend
+- Python
+- TensorFlow / Keras
+- Librosa
+
+### Visualization
+- Matplotlib
+- Mel-Spectrogram analysis
+- Timeline probability graphs
+- Pie charts
+- Frequency band distribution
+
+### Frontend & Deployment
+- Python
+- Streamlit
+
+### Reporting
+- JSON export
+- Professional PDF generation
+
+---
+
+## ✨ Core Features
+
+### 🔐 Authentication
+- Secure login / sign-in
+- Premium feature toggle
+- Watermark removal for premium users
+
+### 🎧 Audio Intelligence
+- WAV file upload
+- Multi-label instrument detection
+- CNN confidence scoring
+
+### 📊 Analytics Dashboard
+- Instrument probability timeline
+- Audio waveform visualization
+- Mel-Spectrogram display
+- Frequency band distribution analysis
+- Interactive pie chart
+- Prediction analysis summary
+- Dominant instrument highlight
+
+### 📄 Reporting System
+- JSON export
+- Professional PDF download
+- Premium watermark-free reporting
+
+---
+
+## 🎼 Supported Instruments
+
+- 🎶 Flute  
+- 🎸 Guitar  
+- 🎹 Piano  
+- 🎻 Violin  
+
+*(Scalable architecture for additional instruments)*
+
+---
+
+## 🧾 Model Card
+
+| Attribute | Details |
+|------------|----------|
+| Model Type | Convolutional Neural Network (CNN) |
+| Input | 128 × 128 Mel-Spectrogram |
+| Output | Multi-label probabilities |
+| Activation | Sigmoid |
+| Loss Function | Binary Crossentropy |
+| Optimizer | Adam |
+| Evaluation Accuracy | ~85% |
+| Training Data | Custom labeled WAV dataset |
+
+---
+
+## 🏗 CNN Architecture
+
+```text
+Input (128x128x1)
+↓
+Conv2D (32 filters) + ReLU
+↓
+MaxPooling
+↓
+Conv2D (64 filters) + ReLU
+↓
+MaxPooling
+↓
+Conv2D (128 filters) + ReLU
+↓
+Flatten
+↓
+Dense (128) + ReLU
+↓
+Dropout
+↓
+Dense (4) + Sigmoid
 ```
-synthetic_audio/
-├── flute/
-│   ├── flute_0.wav
-│   ├── flute_1.wav
-│   └── ...
-├── violin/
-│   ├── violin_0.wav
-│   ├── violin_1.wav
-│   └── ...
-└── trumpet/
-    ├── trumpet_0.wav
-    ├── trumpet_1.wav
-    └── ...
+
+**Why Sigmoid?**  
+Because this is a multi-label classification problem where multiple instruments can exist simultaneously.
+
+---
+
+## 📊 Dashboard Features
+
+- Instrument Probability Timeline  
+- CNN Confidence Indicator  
+- Audio Waveform Visualization  
+- Mel-Spectrogram Representation  
+- Frequency Band Energy Distribution  
+- Interactive Pie Chart  
+- Dominant Instrument Highlight  
+- Premium Export Controls  
+
+---
+
+## 📦 Example JSON Output
+
+```json
+{
+  "report": "InstruNet AI Analysis Report",
+  "timestamp": "2/22/2026, 11:28:54 AM",
+  "instrument": "Guitar",
+  "confidence": 90.31613293826148,
+  "health": "Healthy",
+  "condition": "Excellent resonance with clear harmonic profile.",
+  "intensity": 85.42309722468103,
+  "developer": "Sai Nikith"
+}
 ```
 
+---
 
-- Each instrument folder contains **100 audio samples**
-- File format: **.wav**
+## 💼 Business Use Cases
+
+- 🎼 Music production studios  
+- 🎵 Audio catalog tagging systems  
+- 📊 Streaming platform analytics  
+- 🎓 AI-powered music learning platforms  
+- 🔍 Audio forensics  
+- 🤖 Smart content moderation systems  
 
 ---
 
-## ⚙️ Audio Configuration
+## 🚀 Installation (Local Development)
 
-| Parameter        | Value        |
-|------------------|-------------|
-| Sampling Rate    | 22050 Hz    |
-| Duration         | 3 seconds   |
-| Channels         | Mono        |
-| Samples/Class    | 100         |
-| Total Samples    | 300         |
-
----
-
-## 🧠 How It Works (Workflow Overview)
-
-1. Define time duration and sampling rate
-2. Generate waveform using sine functions
-3. Apply harmonic summation for complex instruments
-4. Save generated signals as `.wav` files
-5. Organize output into class-wise directories
+```bash
+git clone https://github.com/CNN-Based-Music-Instrument-Recognition-System.git
+cd CNN-Based-Music-Instrument-Recognition-System
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ---
 
-## 🚀 Applications & Use Cases
+## 🛣 Roadmap
 
-- Audio classification models
-- CNN-based sound recognition
-- Mel-spectrogram and MFCC extraction
-- DSP and signal processing learning
-- Academic demonstrations and internships
-- Interview-ready project showcase
+- Add 10+ instrument classes
+- Expand dataset diversity
+- Real-time microphone detection
+- Mobile app integration
 
 ---
 
-## ▶️ How to Generate the Dataset
+## 🤝 Contribution
 
-1. Ensure Python is installed
-2. Install required libraries (`numpy`, `soundfile`)
-3. Run the `datasetGeneration.py` script
-4. The dataset will be created inside the `synthetic_audio/` directory
+Contributions are welcome.
 
----
-
-## 📝 Key Highlights
-
-- Fully **synthetic dataset** (no real recordings)
-- Consistent audio length and format
-- Clean signal generation using mathematics
-- Ideal for controlled ML experiments
-- Lightweight and easy to reproduce
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
 
 ---
 
-## 🔮 Future Enhancements
+## 👨‍💻 Author
 
-- Add background noise variation
-- Randomize pitch and amplitude
-- Support additional instruments
-- Generate mel-spectrogram datasets
-- Integrate directly with CNN training pipelines
+**Sai Nikith**  
+AI Engineer | Audio Intelligence Developer  
 
----
-
-## 📜 License
-
-This project is intended for **educational and research purposes**.
+- 🔗 GitHub: [sainikith07](https://github.com/sainikith07)  
+- 🔗 LinkedIn: [Sai Nikith Kaleru](https://www.linkedin.com/in/sai-nikith-kaleru/)  
+- 📧 Email: sainikith04@gmail.com   
 
 ---
 
-## 🙌 Author
+## 💬 Support
 
-Developed as part of an academic / internship-based AI and audio processing project.
+For collaborations, business inquiries, or improvements:
+
+Connect via LinkedIn.
+
+---
+
+## ▶ How To Run
+
+1. Login to the platform  
+2. Upload WAV audio file  
+3. View detection results  
+4. Analyze dashboard insights  
+5. Download JSON or PDF report  
+6. Upgrade to premium for watermark-free export  
+
+---
+
+## ⭐ Project Highlights
+
+✔ Multi-label instrument detection  
+✔ Real-time probability visualization  
+✔ Professional reporting system  
+✔ Premium business logic integration  
+✔ Scalable CNN architecture  
+✔ Production-ready UI  
+
+---
+
+> InstruNet AI demonstrates how deep learning can be transformed from a research prototype into a business-ready intelligent audio analytics platform.
+
