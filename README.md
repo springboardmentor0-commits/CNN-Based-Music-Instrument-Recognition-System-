@@ -1,122 +1,129 @@
-# 🎵 CNN-Based Music Instrument Recognition System
+# 🎵 InstruNet AI  
+### CNN-Based Musical Instrument Recognition System
 
-An AI-powered web application that classifies musical instruments using Convolutional Neural Networks (CNN) and analyzes instrument characteristics using spectrogram-based deep learning.
+InstruNet AI is a deep learning powered system that identifies musical instruments from audio recordings using a Convolutional Neural Network (CNN).  
+The application processes audio files, extracts spectrogram-based features, and predicts the instrument with confidence scores.
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Live Application
+🔗 https://instrunetai.streamlit.app/
 
-This project leverages deep learning and audio signal processing to:
+---
 
-- 🎼 Classify musical instruments from audio samples
-- 📊 Generate Mel Spectrograms and waveform visualizations
-- 🧠 Perform CNN-based audio feature extraction
-- 📄 Generate structured analysis reports
-- 🌐 Deploy as an interactive web application
+## 📌 Project Overview
+Music information retrieval is an important area in artificial intelligence and digital signal processing.  
+This project aims to build an intelligent system capable of recognizing musical instruments from audio recordings using deep learning.
 
-The system is designed to be scalable, modular, and deployment-ready.
+The system converts audio into Mel Spectrograms and uses a trained CNN model to classify instruments.
+
+---
+
+## ⚙️ Key Features
+
+• 🎧 Upload audio files (WAV / MP3)  
+• 🎼 Automatic instrument prediction  
+• 📊 Confidence score visualization  
+• 📉 Audio waveform visualization  
+• 🎚 Mel spectrogram generation  
+• ⏱ Audio segmented into **3 time intervals for analysis**  
+• 📈 Probability distribution charts (Bar & Pie charts)  
+• 🧠 Instrument resonance & harmonic stability analysis  
+• 📄 Downloadable reports in **PDF, JSON and CSV formats**
 
 ---
 
 ## 🧠 Model Architecture
 
-- Convolutional Neural Network (CNN)
-- Input Format: Mel Spectrogram (128x128)
-- Framework: TensorFlow / Keras
-- Audio Processing: Librosa
-- Web Interface: Streamlit
+The system uses a **Convolutional Neural Network (CNN)** trained on spectrogram representations of audio signals.
 
-The model converts raw audio into Mel Spectrogram representations, which are then passed through convolutional layers for feature extraction and classification.
+Pipeline:
 
----
-
-## 📊 Key Features
-
-### 🎼 Instrument Classification
-Supports classification of multiple instruments such as:
-- Piano
-- Guitar
-- Violin
-- Flute
-- Drums  
-*(Extendable to additional instruments)*
-
-### 📈 Audio Visualization
-- Waveform Display
-- Mel Spectrogram Visualization
-- Confidence Score Output
-
-### 📄 Report Generation
-- Downloadable JSON analysis
-- Detailed PDF report including:
-  - Instrument prediction
-  - Confidence score
-  - Visual waveform
-  - Spectrogram output
-
-### 🌐 Web Deployment Ready
-- Streamlit-based UI
-- Cloud deployable
-- Lightweight and interactive
+1. Audio Upload
+2. Audio Preprocessing
+3. Mel Spectrogram Generation
+4. Feature Extraction
+5. CNN Classification
+6. Confidence Prediction
+7. Visualization & Report Generation
 
 ---
 
-## 🔬 Technical Stack
+## 🧰 Tech Stack
 
-| Component           | Technology              |
-|--------------------|-------------------------|
-| Deep Learning       | TensorFlow / Keras      |
-| Audio Processing    | Librosa                 |
-| Visualization       | Matplotlib              |
-| Web Framework       | Streamlit               |
-| Reporting           | ReportLab               |
-| Version Control     | Git & GitHub            |
+**Programming Language**
+- Python
 
----
-
-## 📌 Future Enhancements
-
-- Multi-label instrument detection
-- Real-time microphone input
-- Model optimization for faster inference
-- Expanded dataset for better generalization
-- Advanced anomaly detection for instrument diagnostics
-- Docker containerization for scalable deployment
-
----
-
-## 🎯 Use Cases
-
-- Music education platforms
-- Instrument recognition systems
-- AI-driven audio research
-- Smart music analytics tools
-- Hackathon & innovation projects
-
----
-
-## 👩‍💻 Development Milestones
-
-Milestone 1 – Dataset preparation & preprocessing  
-Milestone 2 – CNN model training & evaluation  
-Milestone 3 – Performance optimization & reporting  
-Milestone 4 – Web deployment & visualization integration  
-
----
-
-## 📜 License
-
-This project is developed for educational and research purposes.
-
----
-
-## ⭐ Acknowledgements
-
-- TensorFlow & Keras
+**Machine Learning**
+- TensorFlow / Keras
+- NumPy
 - Librosa
+
+**Visualization**
+- Plotly
+- Matplotlib
+
+**Frontend**
 - Streamlit
-- Open-source AI community
+
+**Deployment**
+- Streamlit Cloud
+- GitHub
 
 ---
 
-🎵 Transforming Sound into Intelligence.
+#
+---
+
+## 📊 System Workflow
+
+1️⃣ Upload an audio file  
+2️⃣ Convert audio to waveform and mel spectrogram  
+3️⃣ Feed spectrogram to CNN model  
+4️⃣ Predict instrument class  
+5️⃣ Display probability distribution  
+6️⃣ Generate visual analytics  
+7️⃣ Export downloadable reports  
+
+---
+
+## 📈 Output Visualizations
+
+The system generates:
+
+• Audio Waveform  
+• Mel Spectrogram  
+• Instrument Confidence Score  
+• Probability Distribution Charts  
+• Timeline Segment Analysis  
+
+---
+
+## 📄 Report Generation
+
+Users can download analysis reports in multiple formats:
+
+- JSON
+- CSV
+- PDF
+
+These reports include prediction details, confidence scores, and analysis data.
+
+---
+
+## 👩‍💻 Author
+
+**Shravya NB**
+
+Project developed as part of the  
+**CNN-Based Music Instrument Recognition System**
+
+---
+
+## ⭐ Future Improvements
+
+• Multi-instrument detection  
+• Real-time microphone input  
+• Larger dataset training  
+• Mobile deployment  
+• Advanced audio feature extraction
