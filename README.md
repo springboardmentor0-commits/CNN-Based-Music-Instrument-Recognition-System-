@@ -36,4 +36,4 @@ InstruNet AI is a deep learning web application that analyzes audio files (`.wav
 
 3.Run the Streamlit app:
 
-    streamlit run app.py
+       streamlit run app.py
