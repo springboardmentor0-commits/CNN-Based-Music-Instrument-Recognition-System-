@@ -32,10 +32,8 @@ InstruNet AI is a deep learning web application that analyzes audio files (`.wav
    git clone [https://github.com/springboardmentor0-commits/CNN-Based-Music-Instrument-Recognition-System-.git](https://github.com/springboardmentor0-commits/CNN-Based-Music-Instrument-Recognition-System-.git)
 2. Install the required dependencies:
 
-Bash
-pip install -r requirements.txt
+       pip install -r requirements.txt
 
 3.Run the Streamlit app:
 
-Bash
-streamlit run app.py
+    streamlit run app.py
